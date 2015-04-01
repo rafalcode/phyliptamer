@@ -1,0 +1,70 @@
+==20822== Memcheck, a memory error detector
+==20822== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
+==20822== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
+==20822== Command: ./a.out t.t
+==20822== 
+--20822-- Valgrind options:
+--20822--    --leak-check=full
+--20822--    --show-reachable=yes
+--20822--    --track-origins=yes
+--20822--    -v
+--20822-- Contents of /proc/version:
+--20822--   Linux version 3.9.3-1-ARCH (tobias@T-POWA-LX) (gcc version 4.8.0 20130502 (prerelease) (GCC) ) #1 SMP PREEMPT Sun May 19 22:50:29 CEST 2013
+--20822-- Arch and hwcaps: AMD64, amd64-sse3-cx16
+--20822-- Page sizes: currently 4096, max supported 4096
+--20822-- Valgrind library directory: /usr/lib/valgrind
+--20822-- Reading syms from /mnt/sda2/home/nutria/c_circus/linearrayer/a.out
+--20822-- Reading syms from /usr/lib/ld-2.17.so
+--20822-- Reading syms from /usr/lib/valgrind/memcheck-amd64-linux
+--20822--    object doesn't have a symbol table
+--20822--    object doesn't have a dynamic symbol table
+--20822-- Scheduler: using generic scheduler lock implementation.
+--20822-- Reading suppressions file: /usr/lib/valgrind/default.supp
+==20822== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-20822-by-nutria-on-???
+==20822== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-20822-by-nutria-on-???
+==20822== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-20822-by-nutria-on-???
+==20822== 
+==20822== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==20822== don't want to do, unless you know exactly what you're doing,
+==20822== or are doing some strange experiment):
+==20822==   /usr/lib/valgrind/../../bin/vgdb --pid=20822 ...command...
+==20822== 
+==20822== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==20822==   /path/to/gdb ./a.out
+==20822== and then give GDB the following command
+==20822==   target remote | /usr/lib/valgrind/../../bin/vgdb --pid=20822
+==20822== --pid is optional if only one valgrind process is running
+==20822== 
+--20822-- REDIR: 0x4017730 (strlen) redirected to 0x3806c651 (???)
+--20822-- Reading syms from /usr/lib/valgrind/vgpreload_core-amd64-linux.so
+--20822--    object doesn't have a symbol table
+--20822-- Reading syms from /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so
+--20822--    object doesn't have a symbol table
+--20822-- REDIR: 0x4017680 (index) redirected to 0x4c2c710 (index)
+--20822-- REDIR: 0x4017700 (strcmp) redirected to 0x4c2d720 (strcmp)
+--20822-- Reading syms from /usr/lib/libc-2.17.so
+--20822-- REDIR: 0x4eb8980 (strcasecmp) redirected to 0x4a24720 (_vgnU_ifunc_wrapper)
+--20822-- REDIR: 0x4eb4d30 (strnlen) redirected to 0x4a24720 (_vgnU_ifunc_wrapper)
+--20822-- REDIR: 0x4ebac50 (strncasecmp) redirected to 0x4a24720 (_vgnU_ifunc_wrapper)
+--20822-- REDIR: 0x4eb7790 (memset) redirected to 0x4a24720 (_vgnU_ifunc_wrapper)
+--20822-- REDIR: 0x4eb7740 (memcpy@GLIBC_2.2.5) redirected to 0x4a24720 (_vgnU_ifunc_wrapper)
+--20822-- REDIR: 0x4eb6720 (__GI_strrchr) redirected to 0x4c2c530 (__GI_strrchr)
+--20822-- REDIR: 0x4eaee70 (malloc) redirected to 0x4c2bfe0 (malloc)
+--20822-- REDIR: 0x4eaf730 (calloc) redirected to 0x4c29e00 (calloc)
+--20822-- REDIR: 0x4eaf320 (realloc) redirected to 0x4c2c1e0 (realloc)
+--20822-- REDIR: 0x4eaf290 (free) redirected to 0x4c2acd0 (free)
+--20822-- REDIR: 0x4ebe860 (strchrnul) redirected to 0x4c2f0a0 (strchrnul)
+Total lines: 8. Char count / lineidx range:
+5: 0->2; 3: 3->4; 2: 5; 3: 6->7; 
+==20822== 
+==20822== HEAP SUMMARY:
+==20822==     in use at exit: 0 bytes in 0 blocks
+==20822==   total heap usage: 7 allocs, 7 frees, 832 bytes allocated
+==20822== 
+==20822== All heap blocks were freed -- no leaks are possible
+==20822== 
+==20822== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+--20822-- 
+--20822-- used_suppression:      2 dl-hack3-cond-1
+==20822== 
+==20822== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
