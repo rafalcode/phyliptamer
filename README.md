@@ -1,4 +1,15 @@
-Line arrayer is a quick way of characterising text files of arbitrary size.
+# Phyliptamer
+
+Many of the older DNA analysis software have a penchant for visually understandable
+output formats, and this is reflected int he common divergence from a format
+to make things easier to read.
+
+So, the phylip file format has several deviations, which this program tries to conquer.
+
+First up is the interleaved style.
+
+
+Phylptamer is a quick way of characterising text files of arbitrary size.
 In particular it akes asimple attem
 The text file itsel
 
